@@ -1,0 +1,151 @@
+<title>3D Holdem</title>
+
+<h1>3D Holdem</h1>
+
+<p>3D Holdem is a type of Poker with great depth of strategy and resistance to computer analysis.</p>
+
+<h2>Rules</h2>
+
+<p>As in Texas Holdem all players get two hole cards of their own which only they can see
+and there are four rounds of betting with community cards dealt out between them.
+Community cards are dealt out in three rows, which first get three cards each on the flop,
+then one more each on the turn, and finally one last card to each row on the river. In the end
+there are fifteen community cards on the table, three rows with five each.
+A player's hand is the best 5-card poker hand which can be made
+using their two hole cards plus one community card from each row.</p>
+
+<p>Unlike in other poker variants, in 3D Holdem a flush beats a full house (see
+statistics below for why). All other hand rankings are the same.</p>
+
+<h2>Example</h2>
+
+<p>In this example, your hole cards are:</p>
+
+<p>J♡ 4♡</p>
+
+<p>You can potentially make a flush but not a
+straight because both of your hole cards must be in your final hand.</p>
+
+<p>The flop comes down like this:</p>
+
+<p>
+A♢ 5♣ J♣<br>
+2♡ A♠ K♢<br>
+7♡ Q♡ A♣</p>
+
+<p>Now your best hand is A♢ from the first row, A♠ from the second row, and A♣ from the
+third row giving you three aces with a jack and four kicker. You don't make a full
+house (aces over jacks) because your hand must include your 4♡. You also don't make a flush because
+even though there are three hearts on the board two of them are on the same row and
+you have to take exactly one card from each row. You're behind anything
+including the other ace, which makes four aces, any pocket pair, which makes a
+full house, and any queen or king, which makes three aces with a higher kicker.</p>
+
+<p>Here is the turn:</p>
+
+<p>A♢ 5♣ J♣ 8♡<br>
+2♡ A♠ K♢ 8♣<br>
+7♡ Q♡ A♣ J♢</p>
+
+<p>Your hand has improved to a flush using the 8♡, 2♡ and Q♡. Since in 3D Holdem
+flushes beat full houses you now beat a pocket pair.</p>
+
+<p>Finally the river:</p>
+
+<p>A♢ 5♣ J♣ 8♡ A♡<br>
+2♡ A♠ K♢ 8♣ J♠<br>
+7♡ Q♡ A♣ J♢ K♣</p>
+
+<p>Now you've made four jacks and because all four aces are on the board you know
+that nobody can beat you with four aces. But pocket kings will beat
+you with four kings.</p>
+
+<h2>Advantages</h2>
+
+<p>3D Holdem has fast play and simple rules like its close relatives Texas Holdem
+and Omaha. It has a much wider variety of situations which can arise because more cards
+are dealt out and some of them can act as blockers, which gives it greater strategic depth.
+Players being stuck with both of their hole cards creates more
+potential for reads. The larger number of hands also makes it much more difficult
+for computers to analyze.</p>
+
+<h2>Origins</h2>
+
+<p>3D Holdem was inspired by 5 Card Omaha and first posted about
+<a href="https://twitter.com/bramcohen/status/1212468802291687426">here</a>.
+The property that flush should beat full house was discovered while putting this page together.</p>
+
+<h2>Open Source</h2>
+
+<p>'3D Holdem' is not a trademarked term and the rules are free to be used by anyone under that or another name.</p>
+
+<h2>Statistics</h2>
+
+<p>
+<table><thead><tr>
+Number of possible heads-up hands (including two sets of hole cards and one runout)</tr></thead>
+<tbody>
+<tr><td>Game</td><td>Number of Possible Hands</td><td>Formula</td></tr>
+<tr><td>Texas Holdem</td><td>
+55627620048000</td><td>c(52,2)*c(50,2)*c(48,3)*45*44</td></tr>
+<tr><td>Omaha</td><td>
+1144167431687280000</td><td>c(52,4)*c(48,4)*c(44,3)*41*40</td></tr>
+<tr><td>5 Card Omaha</td><td>
+67826245350421958400</td><td>c(52,5)*c(47,5)*c(42,3)*39*38</td></tr>
+<tr><td>3D Holdem</td><td>1791833749667447297011200000</td>
+<td>c(52,2)*c(50,2)*c(48,3)*c(45,3)*c(42,3)*39*38*37*36*35*34//6</td></tr>
+</tbody>
+</table></p>
+
+<p>Going from Omaha to 5CO gets less increased resistance to brute than you might expect.
+It goes up by a factor of less than 100, while 3DH beats it by over 100 million.</p>
+
+<p><table><thead><tr>Hand type percentages</tr></thead>
+<tbody><tr><td>Game</td><td>high</td><td>pair</td><td>two pair</td><td>set</td><td>straight</td>
+<td>flush</td><td>house</td><td>4 kind</td><td>s flush</td></tr>
+<tr><td>Texas Holdem</td><td>17.5</td><td>43.7</td><td>23.5</td><td>4.8</td>
+  <td>4.6</td><td>3.0</td><td>2.7</td><td>0.2</td><td>0.04</td></tr>
+<tr><td>Omaha</td><td>3.0</td><td>26.3</td><td>37.1</td><td>8.7</td>
+  <td>11.1</td><td>6.7</td><td>6.4</td><td>0.5</td><td>0.08</td></tr>
+<tr><td>5 Card Omaha</td><td>0.8</td><td>16.6</td><td>37.8</td><td>9.7</td>
+  <td>15.2</td><td>9.7</td><td>9.5</td><td>0.7</td><td>0.2</td></tr>
+<tr><td>3D Holdem</td><td>0.01</td><td>7.9</td><td>28.1</td><td>25.9</td>
+  <td>18.6</td><td>7.8</td><td>9.8</td><td>1.6</td><td>0.2</td></tr>
+</tbody></table></p>
+
+<p>In 3D Holdem flush beats full house because it has lower
+probability. This happens because of the pigeonhole principle,
+which applies more to full house than flush, but the details are complex and
+the chances were fairly close to begin with.</p>
+
+<p>In the Omahas it looks like three of a kind is less likely than a straight but that's
+misleading. A full house is upgraded but still a three of a kind. Vanilla three of a kind plus
+full house is greater than straight. In Texas Hold'em pair beats high card for the same reason.</p>
+
+<p>Also in the Omahas
+two pair is particularly likely because there's often a pair on the board and one
+in the hole cards because the birthday paradox applies to both. Pairs act sort of like higher high cards.</p>
+
+<p>Hand frequencies were generated by <a href="hand_probabilities.py">this code</a></p>
+
+<p>
+<table><thead><tr>Draw opportunities</tr></thead>
+<tbody>
+<tr><td>Game</td><td>flop</td><td>turn</td><td>river</td></tr>
+<tr><td>Texas Holdem</td><td>1</td><td>5</td><td>15</td></tr>
+<tr><td>Omaha</td><td>6</td><td>18</td><td>36</td></tr>
+<tr><td>5 Card Omaha</td><td>10</td><td>30</td><td>60</td></tr>
+<tr><td>3D Holdem</td><td>27</td><td>37</td><td>61</td></tr>
+</tbody></table>
+</p>
+
+<p>Lots of hands hit a draw on the river in both 5 Card Omaha and 3D Holdem</p>
+
+<h2>Where to play</h2>
+
+<p>You're free to play at home but no organized events, sites, or apps are available
+yet. If you start or know of one please let us know!</p>
+
+<h2>Contribute</h2>
+
+<p>If you'd like to help improve this page you can contribute on github.</p>
