@@ -81,37 +81,133 @@ The property that flush should beat full house was discovered while putting this
 
 <h2>Statistics</h2>
 
-<p>
-<table><thead><tr>
-Number of possible heads-up hands (including two sets of hole cards and one runout)</tr></thead>
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-yla0{font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-nrix{text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-yla0">Game</th>
+    <th class="tg-wa1i">Number of Possible Hands</th>
+    <th class="tg-wa1i">Formula</th>
+  </tr>
+</thead>
 <tbody>
-<tr><td>Game</td><td>Number of Possible Hands</td><td>Formula</td></tr>
-<tr><td>Texas Holdem</td><td>
-55627620048000</td><td>c(52,2)*c(50,2)*c(48,3)*45*44</td></tr>
-<tr><td>Omaha</td><td>
-1144167431687280000</td><td>c(52,4)*c(48,4)*c(44,3)*41*40</td></tr>
-<tr><td>5 Card Omaha</td><td>
-67826245350421958400</td><td>c(52,5)*c(47,5)*c(42,3)*39*38</td></tr>
-<tr><td>3D Holdem</td><td>1791833749667447297011200000</td>
-<td>c(52,2)*c(50,2)*c(48,3)*c(45,3)*c(42,3)*39*38*37*36*35*34//6</td></tr>
+  <tr>
+    <td class="tg-cly1">Texas Holdem</td>
+    <td class="tg-nrix">55627620048000</td>
+    <td class="tg-nrix">c(52,2)*c(50,2)*c(48,3)*45*44</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Omaha</td>
+    <td class="tg-nrix">1144167431687280000</td>
+    <td class="tg-nrix">c(52,4)*c(48,4)*c(44,3)*41*40</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">5 Card Omaha</td>
+    <td class="tg-nrix">67826245350421958400</td>
+    <td class="tg-nrix">c(52,5)*c(47,5)*c(42,3)*39*38</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">3D Holdem</td>
+    <td class="tg-nrix">1791833749667447297011200000</td>
+    <td class="tg-nrix">c(52,2)*c(50,2)*c(48,3)*c(45,3)*c(42,3)*39*38*37*36*35*34//6</td>
+  </tr>
 </tbody>
 </table></p>
 
 <p>Going from Omaha to 5CO gets less increased resistance to brute than you might expect.
 It goes up by a factor of less than 100, while 3DH beats it by over 100 million.</p>
 
-<p><table><thead><tr>Hand type percentages</tr></thead>
-<tbody><tr><td>Game</td><td>high</td><td>pair</td><td>two pair</td><td>set</td><td>straight</td>
-<td>flush</td><td>house</td><td>4 kind</td><td>s flush</td></tr>
-<tr><td>Texas Holdem</td><td>17.5</td><td>43.7</td><td>23.5</td><td>4.8</td>
-  <td>4.6</td><td>3.0</td><td>2.7</td><td>0.2</td><td>0.04</td></tr>
-<tr><td>Omaha</td><td>3.0</td><td>26.3</td><td>37.1</td><td>8.7</td>
-  <td>11.1</td><td>6.7</td><td>6.4</td><td>0.5</td><td>0.08</td></tr>
-<tr><td>5 Card Omaha</td><td>0.8</td><td>16.6</td><td>37.8</td><td>9.7</td>
-  <td>15.2</td><td>9.7</td><td>9.5</td><td>0.7</td><td>0.2</td></tr>
-<tr><td>3D Holdem</td><td>0.01</td><td>7.9</td><td>28.1</td><td>25.9</td>
-  <td>18.6</td><td>7.8</td><td>9.8</td><td>1.6</td><td>0.2</td></tr>
-</tbody></table></p>
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-6vty{background-color:#FFF;color:#333;font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-5ws4{background-color:#FFF;color:#333;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-echw{background-color:#F0F0F0;color:#333;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-7fd7{background-color:#FFF;color:#333;text-align:left;vertical-align:middle}
+.tg .tg-2rp9{background-color:#FFF;color:#333;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-echw" colspan="10">Hand type percentages</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-6vty">Game</td>
+    <td class="tg-5ws4">high</td>
+    <td class="tg-5ws4">pair</td>
+    <td class="tg-5ws4">two pair</td>
+    <td class="tg-5ws4">set</td>
+    <td class="tg-5ws4">straight</td>
+    <td class="tg-5ws4">flush</td>
+    <td class="tg-5ws4">house</td>
+    <td class="tg-5ws4">4 kind</td>
+    <td class="tg-5ws4">s flush</td>
+  </tr>
+  <tr>
+    <td class="tg-7fd7">Texas Holdem</td>
+    <td class="tg-2rp9">17.5</td>
+    <td class="tg-2rp9">43.7</td>
+    <td class="tg-2rp9">23.5</td>
+    <td class="tg-2rp9">4.8</td>
+    <td class="tg-2rp9">4.6</td>
+    <td class="tg-2rp9">3.0</td>
+    <td class="tg-2rp9">2.7</td>
+    <td class="tg-2rp9">0.2</td>
+    <td class="tg-2rp9">0.04</td>
+  </tr>
+  <tr>
+    <td class="tg-7fd7">Omaha</td>
+    <td class="tg-2rp9">3.0</td>
+    <td class="tg-2rp9">26.3</td>
+    <td class="tg-2rp9">37.1</td>
+    <td class="tg-2rp9">8.7</td>
+    <td class="tg-2rp9">11.1</td>
+    <td class="tg-2rp9">6.7</td>
+    <td class="tg-2rp9">6.4</td>
+    <td class="tg-2rp9">0.5</td>
+    <td class="tg-2rp9">0.08</td>
+  </tr>
+  <tr>
+    <td class="tg-7fd7">5 Card Omaha</td>
+    <td class="tg-2rp9">0.8</td>
+    <td class="tg-2rp9">16.6</td>
+    <td class="tg-2rp9">37.8</td>
+    <td class="tg-2rp9">9.7</td>
+    <td class="tg-2rp9">15.2</td>
+    <td class="tg-2rp9">9.7</td>
+    <td class="tg-2rp9">9.5</td>
+    <td class="tg-2rp9">0.7</td>
+    <td class="tg-2rp9">0.2</td>
+  </tr>
+  <tr>
+    <td class="tg-7fd7">3D Holdem</td>
+    <td class="tg-2rp9">0.01</td>
+    <td class="tg-2rp9">7.9</td>
+    <td class="tg-2rp9">28.1</td>
+    <td class="tg-2rp9">25.9</td>
+    <td class="tg-2rp9">18.6</td>
+    <td class="tg-2rp9">7.8</td>
+    <td class="tg-2rp9">9.8</td>
+    <td class="tg-2rp9">1.6</td>
+    <td class="tg-2rp9">0.2</td>
+  </tr>
+</tbody>
+</table></p>
 
 <p>In 3D Holdem flush beats full house because it has lower
 probability. This happens because of the pigeonhole principle,
@@ -128,15 +224,57 @@ in the hole cards because the birthday paradox applies to both. Pairs act sort o
 
 <p>Hand frequencies were generated by <a href="hand_probabilities.py">this code</a></p>
 
-<p>
-<table><thead><tr>Draw opportunities</tr></thead>
+<p><style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-yla0{font-weight:bold;text-align:left;vertical-align:middle}
+.tg .tg-nrix{text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-1wig" colspan="4">Draw opportunities</th>
+  </tr>
+</thead>
 <tbody>
-<tr><td>Game</td><td>flop</td><td>turn</td><td>river</td></tr>
-<tr><td>Texas Holdem</td><td>1</td><td>5</td><td>15</td></tr>
-<tr><td>Omaha</td><td>6</td><td>18</td><td>36</td></tr>
-<tr><td>5 Card Omaha</td><td>10</td><td>30</td><td>60</td></tr>
-<tr><td>3D Holdem</td><td>27</td><td>37</td><td>61</td></tr>
-</tbody></table>
+  <tr>
+    <td class="tg-yla0">Game</td>
+    <td class="tg-wa1i">flop</td>
+    <td class="tg-wa1i">turn</td>
+    <td class="tg-wa1i">river</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Texas Holdem</td>
+    <td class="tg-nrix">1</td>
+    <td class="tg-nrix">5</td>
+    <td class="tg-nrix">15</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Omaha</td>
+    <td class="tg-nrix">6</td>
+    <td class="tg-nrix">18</td>
+    <td class="tg-nrix">36</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">5 Card Omaha</td>
+    <td class="tg-nrix">10</td>
+    <td class="tg-nrix">30</td>
+    <td class="tg-nrix">60</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">3D Holdem</td>
+    <td class="tg-nrix">27</td>
+    <td class="tg-nrix">37</td>
+    <td class="tg-nrix">61</td>
+  </tr>
+</tbody>
+</table>
 </p>
 
 <p>Lots of hands hit a draw on the river in both 5 Card Omaha and 3D Holdem</p>
